@@ -1,0 +1,8 @@
+{
+  "dependencies": {
+    "bcryptjs": "^3.0.2",
+    "dotenv": "^17.0.0",
+    "expr-eval": "^2.0.2",
+    "nodemailer": "^7.0.3"
+  }
+}

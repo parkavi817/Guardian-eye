@@ -1,0 +1,93 @@
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 0 0% 98%; /* Light Mode: Very light gray */
+    --foreground: 220 10% 10%; /* Light Mode: Dark cool gray */
+    --card: 0 0% 100%; /* Light Mode: White */
+    --card-foreground: 220 10% 10%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 220 10% 10%;
+    --primary: 217 91% 60%; /* #3B82F6 - Vibrant Blue */
+    --primary-foreground: 0 0% 98%; /* White */
+    --secondary: 210 40% 96.1%; /* Light cool gray */
+    --secondary-foreground: 220 10% 20%; /* Darker cool gray */
+    --muted: 210 40% 96.1%;
+    --muted-foreground: 210 20% 45%; /* Softer muted text */
+    --accent: 180 60% 45%; /* #2EC4B6 - Vibrant Teal/Cyan */
+    --accent-foreground: 0 0% 98%; /* White */
+    --destructive: 0 72% 51%; /* #EF4444 - Vibrant Red */
+    --destructive-foreground: 0 0% 98%;
+    --border: 210 30% 88%; /* Softer border */
+    --input: 210 30% 93%; /* Softer input background */
+    --ring: 217 91% 65%; /* Slightly lighter primary for ring */
+    
+    --chart-1: 210 80% 60%; /* Blue */
+    --chart-2: 150 70% 45%; /* Green */
+    --chart-3: 30 80% 60%;  /* Orange */
+    --chart-4: 270 70% 65%; /* Purple */
+    --chart-5: 0 70% 60%;   /* Red */
+    --radius: 0.5rem;
+
+    /* Custom sidebar vars for light theme */
+    --sidebar-background: 210 30% 97%;
+    --sidebar-foreground: 220 10% 25%;
+    --sidebar-primary: hsl(var(--primary));
+    --sidebar-primary-foreground: hsl(var(--primary-foreground));
+    --sidebar-accent: 210 40% 90%;
+    --sidebar-accent-foreground: 220 10% 15%;
+    --sidebar-border: 210 25% 85%;
+    --sidebar-ring: hsl(var(--ring));
+  }
+
+  .dark {
+    --background: 220 15% 15%; /* Dark Mode: Dark cool gray */
+    --foreground: 0 0% 98%; /* Dark Mode: Light text */
+    --card: 220 15% 20%; /* Dark Mode: Slightly lighter dark gray for cards */
+    --card-foreground: 0 0% 98%;
+    --popover: 220 15% 20%;
+    --popover-foreground: 0 0% 98%;
+    --primary: 217 91% 60%; /* Keep vibrant blue */
+    --primary-foreground: 0 0% 98%;
+    --secondary: 220 15% 25%; /* Darker secondary */
+    --secondary-foreground: 0 0% 98%;
+    --muted: 220 15% 25%;
+    --muted-foreground: 210 15% 65%; /* Lighter muted text for dark */
+    --accent: 180 60% 45%; /* Keep vibrant teal */
+    --accent-foreground: 0 0% 98%;
+    --destructive: 0 65% 55%; /* #F45D5D - Slightly brighter red for dark */
+    --destructive-foreground: 0 0% 98%;
+    --border: 220 15% 30%; /* Darker border */
+    --input: 220 15% 30%;
+    --ring: 217 91% 65%; 
+    
+    --chart-1: 210 80% 70%;
+    --chart-2: 150 70% 55%;
+    --chart-3: 30 80% 70%;
+    --chart-4: 270 70% 75%;
+    --chart-5: 0 70% 70%;
+
+    /* Custom sidebar vars for dark theme */
+    --sidebar-background: 220 15% 12%;
+    --sidebar-foreground: 0 0% 85%;
+    --sidebar-primary: hsl(var(--primary));
+    --sidebar-primary-foreground: hsl(var(--primary-foreground));
+    --sidebar-accent: 220 15% 22%;
+    --sidebar-accent-foreground: 0 0% 98%;
+    --sidebar-border: 220 15% 25%;
+    --sidebar-ring: hsl(var(--ring));
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
+    @apply min-h-screen flex flex-col;
+  }
+}
